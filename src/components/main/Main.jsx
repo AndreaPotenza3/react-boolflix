@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import Sections from "../sections/Sections"
-import globalContext from "../../contex/contex"
+import globalContext from "../../context/context"
 
 export default function Main() {
 
