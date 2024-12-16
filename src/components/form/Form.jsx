@@ -13,6 +13,7 @@ export default function Form() {
     function onSubmit(e) {
         e.preventDefault()
         fetchData()
+        setQuery('')
     }
     return (
         <form className='form' onSubmit={onSubmit}>
