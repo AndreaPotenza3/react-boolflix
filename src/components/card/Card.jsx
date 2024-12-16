@@ -2,6 +2,10 @@ import itFlag from '../../assets/itFlag.webp'
 import enFlag from '../../assets/enFlag.avif'
 import frFlag from '../../assets/frFlag.jpg'
 import deFlag from '../../assets/deFlag.webp'
+import placeHolder from '../../assets/placeholder-1.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons'
 
 export default function Card({ item }) {
 
@@ -14,15 +18,25 @@ export default function Card({ item }) {
 
     const { title, name, original_title, original_name, vote_average, original_language, poster_path } = item
     const img_url = 'https://image.tmdb.org/t/p/w342'
+    const roundNumber = Math.ceil(vote_average / 2)
+    const stars = new Array(5)
+
+    for (let i = 0; i < stars.length; i++) {
+        stars[i] = <FontAwesomeIcon key={i} icon={i < roundNumber ? faStar : regularStar} />;
+
+    }
+
     return (
         <div>
             <figure>
-                <img src={img_url + poster_path} alt="" />
+                <img className='post-card' src={poster_path ? img_url + poster_path : placeHolder} alt="" />
             </figure>
             <h3>{title || name}</h3>
             <p>{original_title || original_name}</p>
-            <img src={flags[original_language]} height='20' alt="" />
-            <p>{vote_average}</p>
+            <span>Language:</span> <img src={flags[original_language]} height='20' alt="" />
+            <div>
+                <span>Rating:</span> <span className='stars'>{stars}</span>
+            </div>
         </div>
     )
 }

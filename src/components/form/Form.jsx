@@ -15,10 +15,9 @@ export default function Form() {
         fetchData()
     }
     return (
-        <form onSubmit={onSubmit}>
-            <label htmlFor="query">cerca</label>
-            <input type="text" name="query" id="query" value={query} onChange={onchange} placeholder='Cerca' />
-            <button>Cerca</button>
+        <form className='form' onSubmit={onSubmit}>
+            <input className='form-input' type="text" name="query" id="query" value={query} onChange={onchange} placeholder='Cerca' />
+            <button className='form-button'>Cerca</button>
         </form>
     )
 }

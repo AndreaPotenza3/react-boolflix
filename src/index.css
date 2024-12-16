@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Itim&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+html {
+    font-family: "Open Sans", serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +20,73 @@ a {
     color: currentColor;
 }
 
-.container {
-    width: 1020px;
+button {
+    border: none;
+}
+
+img .container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: black;
+    color: red;
+    padding: 20px 10px;
+}
+
+.section-item {
+    overflow-x: scroll;
+    background-color: darkgray;
+    padding: 10px;
+}
+
+.section-title {
+    padding-bottom: 10px;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.stars {
+    color: gold;
+}
+
+.form-input {
+    height: 30px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: rgb(206, 205, 205);
+    border: none;
+}
+
+.form-button {
+    height: 30px;
+    padding: 0 10px;
+    background-color: rgb(206, 205, 205);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.post-card {
+    min-height: 513px;
+    min-width: 342px;
+}
+
+
+.card {
+    min-width: 100%;
 }

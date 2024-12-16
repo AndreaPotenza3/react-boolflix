@@ -4,15 +4,15 @@ export default function Sections({ items = [], title }) {
 
     return (
 
-        <section>
+        <section className="section-item">
             <div className="container">
-                <h2>{title}</h2>
+                <h2 className="section-title">{title}</h2>
             </div>
             <div className="container">
-                <ul>
+                <ul className="list">
                     {items.map((item) => (
                         <li key={items.id}>
-                            <Card item={item} />
+                            <Card className='card' item={item} />
                         </li>
                     ))}
                 </ul>
