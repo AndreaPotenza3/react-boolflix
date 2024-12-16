@@ -48,6 +48,7 @@ button {
     overflow-x: scroll;
     background-color: darkgray;
     padding: 10px;
+    min-height: 670px;
 
 }
 
