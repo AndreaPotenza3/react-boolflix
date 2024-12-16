@@ -8,8 +8,8 @@ export default function Main() {
 
     return (
         <main>
-            <Sections value={filmList} />
-            <Sections value={seriesList} />
+            <Sections title='Movies' items={filmList} />
+            <Sections title='Series' items={seriesList} />
         </main>
     )
 }
