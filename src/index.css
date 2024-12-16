@@ -48,7 +48,7 @@ button {
     overflow-x: scroll;
     background-color: darkgray;
     padding: 10px;
-    min-height: 700px;
+
 }
 
 .section-title {
@@ -101,6 +101,7 @@ button {
 
 .card {
     position: relative;
+    margin-bottom: 30px;
 }
 
 .card-details {
